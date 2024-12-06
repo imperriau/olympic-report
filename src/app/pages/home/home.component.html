@@ -1,3 +1,34 @@
-<h2>Olympic games app</h2>
-<hr />
-<p>{{ (olympics$ | async)?.length }} data loaded</p>
+<div class="home-container">
+  <section class="context">
+    <h1>Olympic Games Medal Tracker</h1>
+    <p>An interactive dashboard that allows you to explore the Olympic performance of various countries across different years. Click on a country to see detailed information.</p>
+  </section>
+
+  <section class="stats-section">
+    <div class="section-header">
+      <h2>Medals by Country</h2>
+    </div>
+    
+    <div class="stats-container">
+      <div class="stat-card">
+        <h3>Number of Olympic Games</h3>
+        <p class="stat-number">{{numberOfGames}}</p>
+      </div>
+      <div class="stat-card">
+        <h3>Number of Countries</h3>
+        <p class="stat-number">{{numberOfCountries}}</p>
+      </div>
+    </div>
+
+    <div class="chart-container" *ngIf="pieChartData.labels?.length">
+      <canvas 
+        baseChart 
+        [datasets]="pieChartData.datasets"
+        [labels]="pieChartData.labels"
+        [options]="pieChartOptions"
+        [type]="'pie'"
+        (chartClick)="onChartClick($event)">
+      </canvas>
+    </div>
+  </section>
+</div>
