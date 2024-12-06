@@ -1,0 +1,31 @@
+<div class="detail-container" *ngIf="countryData">
+    <button class="back-button" (click)="onBack()">← Back</button>
+  
+    <section class="country-header">
+      <h1>{{countryData.country}}</h1>
+    </section>
+  
+    <section class="stats-container">
+      <div class="stat-card">
+        <h3>Number of Entries</h3>
+        <p class="stat-number">{{numberOfEntries}}</p>
+      </div>
+      <div class="stat-card">
+        <h3>Total Medals</h3>
+        <p class="stat-number">{{totalMedals}}</p>
+      </div>
+      <div class="stat-card">
+        <h3>Total Athletes</h3>
+        <p class="stat-number">{{totalAthletes}}</p>
+      </div>
+    </section>
+  
+    <section class="chart-container">
+        <canvas baseChart
+          [type]="'line'"
+          [data]="lineChartData"
+          [options]="lineChartOptions">
+        </canvas>
+    </section>
+  </div>
+  

@@ -1,0 +1,82 @@
+.detail-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  
+    .back-button {
+      background: none;
+      border: 2px solid #04838f;
+      color: #04838f;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-bottom: 2rem;
+  
+      &:hover {
+        background: #04838f;
+        color: white;
+      }
+    }
+  
+    .country-header {
+      background-color: #04838f;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      width: fit-content;
+      margin: auto;
+      margin-bottom: 2rem;
+  
+      h1 {
+        color: white;
+        margin: 0;
+        text-align: center;
+      }
+    }
+  
+    .stats-container {
+      display: flex;
+      flex-flow: wrap;
+      justify-content: center;
+      gap: 2rem;
+  
+      .stat-card {
+        background: white;
+        border-radius: 8px;
+        border: 2px solid #04838f;
+        padding: .5rem;
+        min-width: 200px;
+        text-align: center;
+  
+        h3 {
+          color: #495057;
+          margin-bottom: 0.5rem;
+          font-size: 1rem;
+        }
+  
+        .stat-number {
+          color: #2c3e50;
+          font-size: 2rem;
+          font-weight: bold;
+          margin: 0;
+        }
+      }
+    }
+  
+    .chart-container {
+      margin: 0 auto;
+      padding: 2rem;
+      background: white;
+  
+      h2 {
+        color: #04838f;
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+  
+      .chart-wrapper {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+    }
+  }

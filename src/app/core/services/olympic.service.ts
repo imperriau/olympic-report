@@ -37,4 +37,13 @@ export class OlympicService {
       })
     );
   }
+
+  getCountryDetails(countryName: string): Observable<OlympicCountry | null> {
+    return this.olympics$.pipe(
+      map(countries => {
+        if (!countries) return null;
+        return countries.find(country => country.country === countryName) || null;
+      })
+    );
+  }
 }
