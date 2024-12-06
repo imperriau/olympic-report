@@ -36,8 +36,7 @@ export class DetailComponent implements OnInit, OnDestroy {
         pointHoverBorderColor: '#04838f',
         fill: 'origin',
       }
-    ],
-    labels: []
+    ]
   };
 
   public lineChartOptions: ChartConfiguration<'line'>['options'] = {
